@@ -7,16 +7,72 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/label"
         android:textSize="@dimen/sizeFont"
+        android:drawableBottom="@drawable/plane"
         android:textColor="@color/red"
-        android:textAllCaps="true"
         android:fontFamily="@font/actor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@android:string/ok"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/tv"
+        app:layout_constraintStart_toStartOf="@+id/tv"
+        app:layout_constraintTop_toBottomOf="@+id/tv" />
+
+    <EditText
+        android:id="@+id/et"
+        android:hint="Introduce tu nombre"
+        android:inputType="text"
+        android:imeOptions="actionGo"
+        android:layout_marginBottom="50dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Switch
+        android:id="@+id/sw"
+        android:checked="false"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ToggleButton
+        android:id="@+id/toggle"
+        android:checked="false"
+        android:textOn="@android:string/ok"
+        android:textOff="@android:string/cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toEndOf="@+id/sw"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <CheckBox
+        android:id="@+id/cb"
+        android:checked="true"
+        android:text="Verano"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="50dp"
+        app:layout_constraintStart_toEndOf="@+id/toggle"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
